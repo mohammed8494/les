@@ -17,7 +17,7 @@ const logger = async (req,res,next) => {
 
     await fspromises.appendFile(path.join(__dirname,"..","logs","log.txt"),`${date}\t ${uuid()}\t ${req.method} \n`).catch
     ((err) => {console.log(err)});
-    next(); // this is important to move forward
+    next();
     
 }
 module.exports = logger;
