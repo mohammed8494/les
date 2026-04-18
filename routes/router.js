@@ -5,4 +5,6 @@ router.get("/", (req, res) => {
   res.send("<h1> Welcome to the server</h1>");
 });
 
+
+
 module.exports = router;

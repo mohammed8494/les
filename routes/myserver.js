@@ -1,13 +1,12 @@
 const express = require("express");
 const router = express.Router();
+const {wellcomeToServer,lolpage} = require('../controller/servercontrol')
 
 
-router.get("/api", (req, res) => {
-    res.send("<h1> Welcome to the myserver</h1>");
-});
 
-router.get('/lol',(req,res) => {
-    res.send('<h1> this is lol page </h1>')
-})
+router.get("/api", wellcomeToServer);
+
+router.get('/lol',lolpage)
+
 
 module.exports = router;
